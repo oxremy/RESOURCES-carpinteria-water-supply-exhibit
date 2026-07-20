@@ -2,7 +2,7 @@
 
 Authoring kit for the two CVWD supply Sankey scenes. **Not District-official.** Numbers are transcribed from public UWMP / related docs.
 
-**Public exhibit (HTML + stills):** use the separate [carpinteria-water-supply-exhibit](https://github.com/oxremy/carpinteria-water-supply-exhibit) repo. Keep AF JSON in sync with that repo’s `data/` when numbers change (update exhibit first, then copy here and re-apply in Blender).
+**Public exhibit (HTML + stills):** [carpinteria-water-supply-exhibit](https://github.com/oxremy/carpinteria-water-supply-exhibit) ([live pages](https://oxremy.github.io/carpinteria-water-supply-exhibit/)). That site links here from its footer as the **authoring / data method** (AF JSON + layout scripts). Keep AF JSON in sync with the exhibit repo’s `data/` when numbers change (update exhibit first, then copy here and re-apply in Blender).
 
 ## Contents
 
