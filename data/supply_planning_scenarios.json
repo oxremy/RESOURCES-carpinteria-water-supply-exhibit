@@ -86,9 +86,9 @@
       "recycled_af": 1000,
       "ocean_outfall_af": 1300,
       "demand_af": 3848,
-      "supply_af": 3867,
-      "balance_af": 19,
-      "notes": "Five-year avg from 2014–2018 sequence (UWMP). JSON GW 1596 = Table 5-4 residual; trunk GW_wells=2596. Ocean total = hist mean."
+      "supply_af": 3866,
+      "balance_af": 18,
+      "notes": "Five-year avg from 2014–2018 sequence (UWMP). JSON GW 1596 = Table 5-4 residual; trunk GW_wells=2596. supply_af uses column sum 3866 (949+321+1000+1596); UWMP prints Supply Total 3867. Ocean total = hist mean; residual outfall label stays 200–400 AF."
     }
   ]
 }
