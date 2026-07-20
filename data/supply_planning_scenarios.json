@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "source": "CVWD 2025 UWMP Final §5.2.3 Tables 5-1 / 5-2 / 5-4",
+    "title": "Planning Water Supplies with CAPP — 2030 scenarios",
+    "planning_year": 2030,
+    "units": "AFY",
+    "stack_order_bottom_to_top": ["groundwater", "cachuma", "swp"],
+    "notes": "Projected planning values, not historical actuals. Recycled (CAPP) is basin injection — not a fourth trunk supply. JSON groundwater_af is the UWMP Table 5 value. Dry tables (5-2/5-4) net Recycled out of GW (Supply≈Demand) → script restores GW_wells=GW+recycled. Normal (5-1) lists available supplies with surplus; GW 1200 is yield planning — script does NOT add recycled (avoids 5065 trunk). OceanOUT+OceanREUSE = hist mean outfall ~1300 AFY.",
+    "capp": {
+      "meaning": "CSD WWTP → AWPF → injection → basin (indirect potable reuse)",
+      "injection_afy_default": 1000,
+      "objects_fixed": [
+        "CAPPFacility",
+        "CAPPOutDown",
+        "CAPPOutDownArrow",
+        "CAPP90",
+        "CAPPBendCenter"
+      ],
+      "objects_adjust_length": ["CAPPIn", "CAPPConnect", "CAPPOut"]
+    },
+    "ocean_outfall": {
+      "meaning": "TOTAL CSD WWTP effluent (OceanOUT still-to-Pacific + OceanREUSE diverted-to-CAPP). Not district demand. Default total = historical mean ≈1300 AFY; reuse = min(recycled_af, total); out = total − reuse.",
+      "agency": "Carpinteria Sanitary District",
+      "historical_mean_afy": 1300,
+      "historical_mean_note": "Mean of known 2014–2025 ocean_outfall_af in supply_historical.json, rounded to nearest 100 AF",
+      "uwmp_gsp_note": "UWMP §5 tables do not vary outfall by scenario. GSP notes effluent formerly outfalled and CAPP redirects to injection / reduces ocean-boundary inflow — not a quantified outfall AF series."
+    }
+  },
+  "default_scenario": "normal_wy",
+  "example": {
+    "label": "LineupEqual",
+    "scenario_id": null,
+    "groundwater_af": 1333.333,
+    "cachuma_af": 1333.333,
+    "swp_af": 1333.333,
+    "recycled_af": 1000,
+    "ocean_outfall_af": 1300,
+    "demand_af": 4000,
+    "notes": "Synthetic equal trunk lanes + CAPP 1000; ocean total = historical mean"
+  },
+  "scenarios": [
+    {
+      "id": "normal_wy",
+      "label": "Normal water year",
+      "uwmp_section": "5.2.3.1",
+      "table": "5-1",
+      "dwr_form": "7-2R",
+      "planning_year": 2030,
+      "groundwater_af": 1200,
+      "cachuma_af": 2110,
+      "swp_af": 755,
+      "recycled_af": 1000,
+      "ocean_outfall_af": 1300,
+      "demand_af": 3848,
+      "supply_af": 5065,
+      "balance_af": 1217,
+      "notes": "Normal Cachuma 75% planning (2110). JSON GW 1200 = Table 5-1 yield (availability); trunk GW stays 1200 → trunk≈4065. ocean_outfall_af is TOTAL (hist mean); split reuse 1000 / out 300."
+    },
+    {
+      "id": "single_dry",
+      "label": "Single dry year",
+      "uwmp_section": "5.2.3.2",
+      "table": "5-2",
+      "dwr_form": "7-3R",
+      "planning_year": 2030,
+      "groundwater_af": 628,
+      "cachuma_af": 2110,
+      "swp_af": 110,
+      "recycled_af": 1000,
+      "ocean_outfall_af": 1300,
+      "demand_af": 3848,
+      "supply_af": 3848,
+      "balance_af": 0,
+      "notes": "Single-dry SWP ≈5% Table A (110). JSON GW 628 = Table 5-2 residual; trunk GW_wells=1628. Ocean total unchanged (hist mean)."
+    },
+    {
+      "id": "five_year_avg",
+      "label": "Five-year drought (avg)",
+      "uwmp_section": "5.2.3.3",
+      "table": "5-4",
+      "dwr_form": "7-4R",
+      "planning_year": 2030,
+      "groundwater_af": 1596,
+      "cachuma_af": 949,
+      "swp_af": 321,
+      "recycled_af": 1000,
+      "ocean_outfall_af": 1300,
+      "demand_af": 3848,
+      "supply_af": 3867,
+      "balance_af": 19,
+      "notes": "Five-year avg from 2014–2018 sequence (UWMP). JSON GW 1596 = Table 5-4 residual; trunk GW_wells=2596. Ocean total = hist mean."
+    }
+  ]
+}

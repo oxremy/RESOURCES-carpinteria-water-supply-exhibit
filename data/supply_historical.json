@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "source": "UWMP Figure 4-1 / Table 4-1 / Table 4-3",
+    "title": "Historical Water Supplies, 2011 to 2025",
+    "cachuma_includes_id1": true,
+    "units": "AFY",
+    "stack_order_bottom_to_top": ["groundwater", "cachuma", "swp"],
+    "notes": "Transcribed from UWMP Figure 4-1 bar labels. Cachuma includes ID#1 exchange (shown as Cachuma in the figure). 2025 SWP = 9 from Table 4-1 / chart (total 3804); segment is a thin sliver. Precipitation line not transcribed (null).",
+    "ocean_outfall": {
+      "meaning": "CSD WWTP secondary effluent to Pacific ocean outfall — NOT district demand / total supply",
+      "agency": "Carpinteria Sanitary District",
+      "units": "AFY",
+      "mgd_to_afy": 1120.86,
+      "mgd_to_afy_note": "AFY ≈ MGD × 365.25 × 1e6 / 325851.4",
+      "coverage": "null for 2011–2013 (no series in local resources) → ribbon uses mean of known years rounded to nearest 100 AF; label Ocean Outfall / UNKNOWN AF. 2014–2024 from CAPP Title 22 Table 4-4 annual avg MGD; 2025 from UWMP Table 6-3 (1218 AF already)",
+      "sources": [
+        "CAPP Title 22 Engineering Report Aug 2025 Table 4-4 (CIWQS)",
+        "CVWD 2025 UWMP Table 6-3"
+      ]
+    }
+  },
+  "example": {
+    "label": "ExampleYear",
+    "year": 2013,
+    "groundwater_af": 312,
+    "cachuma_af": 3697,
+    "swp_af": 862,
+    "demand_af": 4871,
+    "ocean_outfall_af": null,
+    "precip_in": null,
+    "notes": "2013 from Figure 4-1 — used as default Apply ExampleYear test row. No ocean outfall series for 2013."
+  },
+  "years": [
+    {
+      "year": 2011,
+      "groundwater_af": 1365,
+      "cachuma_af": 2172,
+      "swp_af": 501,
+      "demand_af": 4038,
+      "ocean_outfall_af": null,
+      "precip_in": null,
+      "sources": ["UWMP Figure 4-1"]
+    },
+    {
+      "year": 2012,
+      "groundwater_af": 1174,
+      "cachuma_af": 2923,
+      "swp_af": 433,
+      "demand_af": 4530,
+      "ocean_outfall_af": null,
+      "precip_in": null,
+      "sources": ["UWMP Figure 4-1"]
+    },
+    {
+      "year": 2013,
+      "groundwater_af": 312,
+      "cachuma_af": 3697,
+      "swp_af": 862,
+      "demand_af": 4871,
+      "ocean_outfall_af": null,
+      "precip_in": null,
+      "sources": ["UWMP Figure 4-1"]
+    },
+    {
+      "year": 2014,
+      "groundwater_af": 1434,
+      "cachuma_af": 2198,
+      "swp_af": 891,
+      "demand_af": 4523,
+      "ocean_outfall_af": 1334,
+      "ocean_outfall_mgd": 1.19,
+      "precip_in": null,
+      "sources": ["UWMP Figure 4-1", "CAPP Title 22 Table 4-4"]
+    },
+    {
+      "year": 2015,
+      "groundwater_af": 2943,
+      "cachuma_af": 468,
+      "swp_af": 736,
+      "demand_af": 4147,
+      "ocean_outfall_af": 1255,
+      "ocean_outfall_mgd": 1.12,
+      "precip_in": null,
+      "sources": ["UWMP Figure 4-1", "CAPP Title 22 Table 4-4"]
+    },
+    {
+      "year": 2016,
+      "groundwater_af": 2751,
+      "cachuma_af": 743,
+      "swp_af": 377,
+      "demand_af": 3871,
+      "ocean_outfall_af": 1244,
+      "ocean_outfall_mgd": 1.11,
+      "precip_in": null,
+      "sources": ["UWMP Figure 4-1", "CAPP Title 22 Table 4-4"]
+    },
+    {
+      "year": 2017,
+      "groundwater_af": 1235,
+      "cachuma_af": 1165,
+      "swp_af": 2031,
+      "demand_af": 4431,
+      "ocean_outfall_af": 1379,
+      "ocean_outfall_mgd": 1.23,
+      "precip_in": null,
+      "sources": ["UWMP Figure 4-1", "CAPP Title 22 Table 4-4"]
+    },
+    {
+      "year": 2018,
+      "groundwater_af": 2239,
+      "cachuma_af": 0,
+      "swp_af": 1435,
+      "demand_af": 3674,
+      "ocean_outfall_af": 1267,
+      "ocean_outfall_mgd": 1.13,
+      "precip_in": null,
+      "notes": "No Cachuma segment on chart (0 AF).",
+      "sources": ["UWMP Figure 4-1", "CAPP Title 22 Table 4-4"]
+    },
+    {
+      "year": 2019,
+      "groundwater_af": 933,
+      "cachuma_af": 2750,
+      "swp_af": 427,
+      "demand_af": 4110,
+      "ocean_outfall_af": 1412,
+      "ocean_outfall_mgd": 1.26,
+      "precip_in": null,
+      "sources": ["UWMP Figure 4-1", "CAPP Title 22 Table 4-4"]
+    },
+    {
+      "year": 2020,
+      "groundwater_af": 794,
+      "cachuma_af": 3311,
+      "swp_af": 0,
+      "demand_af": 4105,
+      "ocean_outfall_af": 1367,
+      "ocean_outfall_mgd": 1.22,
+      "precip_in": null,
+      "notes": "No SWP segment on chart (0 AF).",
+      "sources": ["UWMP Figure 4-1", "CAPP Title 22 Table 4-4"]
+    },
+    {
+      "year": 2021,
+      "groundwater_af": 1392,
+      "cachuma_af": 2248,
+      "swp_af": 764,
+      "demand_af": 4404,
+      "ocean_outfall_af": 1278,
+      "ocean_outfall_mgd": 1.14,
+      "precip_in": null,
+      "sources": ["UWMP Figure 4-1", "UWMP Table 4-3", "CAPP Title 22 Table 4-4"]
+    },
+    {
+      "year": 2022,
+      "groundwater_af": 1881,
+      "cachuma_af": 1269,
+      "swp_af": 1145,
+      "demand_af": 4295,
+      "ocean_outfall_af": 1177,
+      "ocean_outfall_mgd": 1.05,
+      "precip_in": null,
+      "notes": "GW drought peak (Table 4-3).",
+      "sources": ["UWMP Figure 4-1", "UWMP Table 4-3", "CAPP Title 22 Table 4-4"]
+    },
+    {
+      "year": 2023,
+      "groundwater_af": 605,
+      "cachuma_af": 2691,
+      "swp_af": 0,
+      "demand_af": 3296,
+      "ocean_outfall_af": 1334,
+      "ocean_outfall_mgd": 1.19,
+      "precip_in": null,
+      "notes": "No SWP segment on chart (0 AF).",
+      "sources": ["UWMP Figure 4-1", "UWMP Table 4-3", "CAPP Title 22 Table 4-4"]
+    },
+    {
+      "year": 2024,
+      "groundwater_af": 1175,
+      "cachuma_af": 2294,
+      "swp_af": 0,
+      "demand_af": 3469,
+      "ocean_outfall_af": 1367,
+      "ocean_outfall_mgd": 1.22,
+      "precip_in": null,
+      "notes": "No SWP segment on chart (0 AF).",
+      "sources": ["UWMP Figure 4-1", "UWMP Table 4-3", "CAPP Title 22 Table 4-4"]
+    },
+    {
+      "year": 2025,
+      "groundwater_af": 809,
+      "cachuma_af": 2986,
+      "swp_af": 9,
+      "demand_af": 3804,
+      "ocean_outfall_af": 1218,
+      "precip_in": null,
+      "notes": "Cachuma 2986 = Project 2629 + ID#1 357 (Table 4-1). SWP 9 from Table 4-1 (thin chart sliver; not 0). Ocean 1218 AF = UWMP Table 6-3 effluent discharge (already AF).",
+      "sources": ["UWMP Figure 4-1", "UWMP Table 4-1", "UWMP Table 4-3", "UWMP Table 6-3"]
+    }
+  ]
+}
